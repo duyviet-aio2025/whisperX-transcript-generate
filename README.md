@@ -18,7 +18,10 @@ pip install -r requirements.txt
 ### 2. Get HuggingFace Token
 
 1. Go to [HuggingFace Settings](https://huggingface.co/settings/tokens)
-2. Create a token and accept terms for pyannote models
+2. Create a token with read permissions
+3. Accept terms for these models (required for speaker diarization):
+   - [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1)
+   - [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0)
 
 ### 3. Run Application
 
