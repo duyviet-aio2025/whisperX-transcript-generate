@@ -277,10 +277,14 @@ def show_video_creation_section(segments, uploaded_file, temp_audio_path):
                 
                 # Check if FFmpeg is available
                 if not video_creator.check_ffmpeg():
-                    st.error("❌ FFmpeg not found! Please install FFmpeg first.")
+                    st.error("❌ FFmpeg not found! Video creation is not available.")
+                    st.info("💡 If deploying to Streamlit Cloud, make sure `packages.txt` file contains `ffmpeg`")
                     with st.expander("🔧 FFmpeg Installation Guide"):
                         st.markdown("""
-                        **Install FFmpeg:**
+                        **For Streamlit Cloud:**
+                        - Create `packages.txt` file with content: `ffmpeg`
+                        
+                        **For Local Development:**
                         
                         **macOS:**
                         ```bash

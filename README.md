@@ -31,6 +31,12 @@ streamlit run app.py
 
 Open `http://localhost:8501` in your browser.
 
+### 4. Deploy to Streamlit Cloud (Optional)
+
+1. Push code to GitHub
+2. Connect to [Streamlit Cloud](https://share.streamlit.io/)
+3. Make sure `packages.txt` file contains `ffmpeg` for video creation
+
 ## ⚙️ Configuration
 
 ### Model Options

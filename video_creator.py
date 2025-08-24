@@ -33,6 +33,13 @@ class VideoCreator:
             subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
             return True
         except (subprocess.CalledProcessError, FileNotFoundError):
+            # Try alternative paths for cloud deployments
+            for ffmpeg_path in ['/usr/bin/ffmpeg', '/usr/local/bin/ffmpeg', 'ffmpeg']:
+                try:
+                    subprocess.run([ffmpeg_path, '-version'], capture_output=True, check=True)
+                    return True
+                except (subprocess.CalledProcessError, FileNotFoundError):
+                    continue
             return False
     
     def create_srt_file(self, segments: List[Dict], output_path: str, include_speakers: bool = True) -> str:
