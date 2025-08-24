@@ -49,7 +49,7 @@ Open `http://localhost:8501` in your browser.
 ### Languages
 
 - **Auto-detect** (recommended)
-- **Manual**: vi (Vietnamese), en (English), zh (Chinese), ja (Japanese), etc.
+- **Manual**: vi (Vietnamese), en (English), etc.
 
 ## 📝 Usage
 
